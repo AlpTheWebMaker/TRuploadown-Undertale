@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploadown</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #545658, #e0e4e9); /* Mavi gradyan arka plan */
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* Metin rengi */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: #333; /* Navbar arka plan rengi */
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 24px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            color: #ffd700; /* Hover rengini sarı yapalım */
+        }
+
+        .button {
+            color: #fff;
+            background: rgb(3, 147, 6);
+            outline: 0;
+            border: 0;
+            padding: 12px 25px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background: rgb(7, 129, 4); /* Buton hover rengi */
+        }
+
+        h1, h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        h6 {
+            color: #fff;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 10px 20px;
+        }
+
+        #home, #hakkinda, #iletisim {
+            padding: 30px;
+            text-align: center;
+        }
+
+        #home img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .content-section {
+            display: none;
+            padding: 30px;
+            background: #444;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .navbar p {
+            float: right;
+            margin: 0;
+            padding: 16px 24px;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showSection('home')">Ana Sayfa</a>
+        <a href="#hakkinda" onclick="showSection('hakkinda')">Hakkında</a>
+        <a href="#iletisim" onclick="showSection('iletisim')">İletişim</a>
+        <p>Uploadown</p>
+    </div>
+
+    <div id="home">
+        <h1>Undertale - 2015</h1>
+        <p>Undertale, Toby Fox tarafından 2015 yılında geliştirilmiş bir 2D rol yapma oyunudur. Bu oyunda, yeraltına düşen bir çocuğu kontrol ediyorsunuz ve çeşitli canavarlarla etkileşime giriyorsunuz.</p>
+        <a href="Undertale V1.001-Oyunindir.cafe.zip" class="button" download="Undertale Uploadown">Direkt İndir</a>
+        <br><br>
+        <img src="image.png" alt="Görsel Yüklenemedi">
+        <br><br>
+        <p>Undertale, oyuncunun kararlarına dayalı olarak gelişen bir hikayeye sahip. Oyunda öldürmek yerine, canavarları kurtarmak için onları sakinleştirme ve boyun eğdirmek mümkündür.</p>
+        <a class="button" href="download.html">İndir 1</a><br><br>
+        <a class="button" href="download.html">İndir 2</a><br><br>
+        <a class="button" href="download.html">İndir 3</a><br><br>
+        <h6>Kaynakça: <a href="https://tr.wikipedia.org/wiki/Undertale" target="_blank">Wikipedia</a></h6>
+    </div>
+
+    <div id="hakkinda" class="content-section">
+        <h2>Oyun Hakkında</h2>
+        <p>Undertale, oyuncuların seçimlerine göre şekillenen bir hikayeye sahip. Oyuncular, canavarları öldürmek yerine onlarla dost olmaya çalışabilir. Her karar, hikayenin ilerleyişini etkiler.</p>
+    </div>
+
+    <div id="iletisim" class="content-section">
+        <h2>İletişim</h2>
+        <p>Bana ulaşmak için aşağıdaki e-posta adresini kullanabilirsiniz:</p>
+        <p class="iletisim">mralpbilisim@gmail.com</p>
+    </div>
+
+    <script>
+        function showSection(section) {
+            // Tüm bölümleri gizle
+            document.getElementById('hakkinda').style.display = 'none';
+            document.getElementById('iletisim').style.display = 'none';
+            document.getElementById('home').style.display = 'none';
+
+            // Seçilen bölümü göster
+            document.getElementById(section).style.display = 'block';
+        }
+
+        // Sayfa ilk açıldığında Ana Sayfa'yı göster
+        window.onload = function() {
+            showSection('home');
+        };
+    </script>
+</body>
+</html>
